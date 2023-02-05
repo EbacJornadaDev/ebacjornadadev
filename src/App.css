@@ -11,8 +11,8 @@ html{
 
 .app__videos{
   border: 1px solid black;
-  height: 800px;
-  max-height: 100vh;
+  height: 100vh;
+  max-height: 800px;
   width: 80%;
   max-width: 500px;
   border-radius: 20px;

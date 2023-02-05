@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Video from "./pages/Video";
-import db from "./config/firebase_example";
+import db from "./config/firebase";
 import { collection, getDocs } from "firebase/firestore/lite";
 
 function App() {
@@ -10,7 +10,6 @@ function App() {
     maxHeight = window.innerHeight;
   }
 
-  console.log(maxHeight);
   const [videos, setVideos] = useState([]);
 
   async function getVideos() {
@@ -24,8 +23,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <div className="app__videos" style={{ maxHeight: `${maxHeight}px` }}>
+    <div className="App" style={{ maxHeight: `${maxHeight}px` }}>
+      <div className="app__videos" >
         {videos.map((item) => {
           return (
             <Video
